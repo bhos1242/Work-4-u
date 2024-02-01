@@ -20,7 +20,12 @@ const StepMenu = ({ currentStep, onStepClick }) => {
               ? "font-bold text-blue-500"
               : "text-gray-500"
           }`}
-          onClick={() => onStepClick(index + 1)}
+          onClick={() => {
+            // Disable clicking on "Submit task" if it's the last step
+            if (index + 1 !== steps.length) {
+              onStepClick(index + 1);
+            }
+          }}
         >
           {step}
         </div>
