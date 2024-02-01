@@ -64,7 +64,9 @@ const PaymentMethods = () => {
           </div>
           <div className="mt-4">
             <div className="font-semibold text-gray-800">
-              Can't find your address?
+              <div className="font-semibold text-gray-800">
+                Can&apos;t find your address?
+              </div>
             </div>
             <a href="#" className="text-blue-500 hover:underline">
               Enter manually
@@ -78,7 +80,7 @@ const PaymentMethods = () => {
           </div>
           <p className="text-base text-gray-600">
             Please provide your bank details to receive payments. Rest assured,
-            we won't deduct any funds from your account.
+            we won&apos;t deduct any funds from your account.
           </p>
           <div className="mt-4">
             <div className="font-semibold text-gray-800">
