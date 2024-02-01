@@ -1,25 +1,18 @@
 import React from "react";
 
+// ... (your existing code)
+
 const StepFive = ({ onNext, onPrevious, updateDetails }) => {
   const handleNext = () => {
     // Validate step five details here if needed
-    // For example, check if budget is not empty and greater than or equal to 200
-    const budgetInput = document.getElementById("budget");
-    const budget = budgetInput.value;
-
+    // For example, check if budget is not empty
+    const budget = document.getElementById("budget").value;
     if (!budget) {
       alert("Budget is required!");
       return;
     }
 
-    const numericBudget = parseFloat(budget);
-
-    if (isNaN(numericBudget) || numericBudget < 200) {
-      alert("Budget must be a number and should be at least 200!");
-      return;
-    }
-
-    updateDetails({ budget: numericBudget });
+    updateDetails({ budget });
     onNext();
   };
 
@@ -27,7 +20,7 @@ const StepFive = ({ onNext, onPrevious, updateDetails }) => {
     <div>
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-600">
-          What's your budget for this task? (Minimum: 200)
+          What&apos;s your budget for this task? (Minimum: 200)
         </label>
         <input
           id="budget"
